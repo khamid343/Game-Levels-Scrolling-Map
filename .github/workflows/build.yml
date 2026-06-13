@@ -25,6 +25,11 @@ jobs:
           flutter-version: '3.22.0'
           channel: 'stable'
 
+      - name: Remove pubspec.lock
+        run: |
+          rm -f pubspec.lock
+          rm -f example/pubspec.lock
+
       - name: Get dependencies (package)
         run: flutter pub get
 
